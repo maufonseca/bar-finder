@@ -10,11 +10,17 @@ import retrofit2.http.GET
 
 const val BASE_URL = "http://places.google.com/"
 
+/**
+ * Interface of the requests to be made to Google Places API
+ */
 interface PlacesAPIService {
 
     @GET("list")
     fun getPlaceList(): Observable<PlaceResponseModel>
 
+    /**
+     *Object instance to make the requests to Google Places API
+     */
     companion object {
 
         fun create(): PlacesAPIService {

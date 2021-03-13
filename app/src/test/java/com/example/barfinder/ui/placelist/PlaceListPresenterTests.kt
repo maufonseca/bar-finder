@@ -16,7 +16,7 @@ class PlaceListPresenterTests {
 
     @Test
     fun testSutMethods() {
-        Assert.assertEquals(4, 2 + 2)
+        //test sut
     }
 
     @After

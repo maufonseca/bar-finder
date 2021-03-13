@@ -7,6 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.barfinder.R
 import com.example.barfinder.model.Place
 
+/**
+ * Adapter to the place list recycler View.
+ *
+ * This adapter will mount and bind the places cells on the recyclerview
+ */
 class PlaceListAdapter(private val context: Context, private val placeList: ArrayList<Place>) : RecyclerView.Adapter<PlaceViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceViewHolder {

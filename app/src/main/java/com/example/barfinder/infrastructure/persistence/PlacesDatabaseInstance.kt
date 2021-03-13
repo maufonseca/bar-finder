@@ -2,9 +2,12 @@ package com.example.barfinder.infrastructure.persistence
 
 import com.example.barfinder.model.Place
 import io.realm.Realm
-import io.realm.RealmList
-import java.util.*
 
+/**
+ * Instance of the realm database
+ *
+ * Used for posting and getting places from local persistence DB
+ */
 class PlacesDatabaseInstance :  Database {
     private lateinit var realm: Realm
 
@@ -12,7 +15,7 @@ class PlacesDatabaseInstance :  Database {
         realm = Realm.getDefaultInstance()
     }
 
-    override fun getCurrencies(): List<Place> {
+    override fun getPlaces(): List<Place> {
         val response = mutableListOf<Place>()
         val realmList = realm.where(DatabasePlaceModel::class.java).findAll()
         realmList.forEach {
@@ -21,8 +24,8 @@ class PlacesDatabaseInstance :  Database {
         return response
     }
 
-    override fun postCurrencies(currencies: List<Place>) {
-        currencies.forEach {
+    override fun postPlaces(places: List<Place>) {
+        places.forEach {
             val placeToAdd = DatabasePlaceModel(it.identifier, it.name, it.type)
             realm.beginTransaction()
             realm.insertOrUpdate(placeToAdd)

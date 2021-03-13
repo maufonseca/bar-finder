@@ -8,12 +8,12 @@ package com.example.barfinder.ui.locationpermission.interfaces
 interface LocationPermissionPresentation {
 
     /**
-     * Present when the permission is granted by the user.
+     * Handle when the permission is granted by the user.
      */
     fun locationPermissionGranted()
 
     /**
-     * Present when the permission is denyed by the user.
+     * Handle when the permission is denyed by the user.
      */
     fun locationPermissionDenied()
 
