@@ -11,6 +11,14 @@ class PlaceListActivity : PlaceListView, PlaceFilterView, AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_place_list)
+        setupScene()
+    }
+
+    /**
+     * Create and link the scene Presenters and Interactors among themselves
+     */
+    fun setupScene() {
+        TODO("Create and setup presenter/intercator/disposables/database/services")
     }
 
     override fun addPlace(place: Place) {
@@ -43,5 +51,17 @@ class PlaceListActivity : PlaceListView, PlaceFilterView, AppCompatActivity() {
 
     override fun searchBarSentWith(text: String) {
         TODO("Not yet implemented")
+    }
+
+    /**
+     * Dispose scene interactors and presenters
+     */
+    fun disposeScene() {
+
+    }
+
+    override fun onDestroy() {
+        disposeScene()
+        super.onDestroy()
     }
 }
