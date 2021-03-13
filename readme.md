@@ -61,6 +61,8 @@ Our Activities are the Views of the UI. That's all they do. Their responsibility
 
 *Example from PlaceListActivity.kt*
 ```java
+class PlaceListActivity : PlaceListView, PlaceFilterView, AppCompatActivity() {
+    
     override fun addPlace(place: Place) {
         listRecyclerViewAdapter.addItem(place)
     }
@@ -76,6 +78,7 @@ Our Activities are the Views of the UI. That's all they do. Their responsibility
     override fun clearList() {
         listRecyclerViewAdapter.removeAllItems()
     }
+}
 ```
 
 ### Testable logic with the Interactors
