@@ -100,9 +100,7 @@ Decoupling the app logic from the Activities is useful not only because it makes
 ### Unit-Testing the logic
 
 The objective here is not to give full code coverage, which would be time-consuming, but only exemplify how we structure the unit tests and mocks to work with the interactors.
-Inside the test project, we can find those examples. The purpose is to call some methods in the interactors and test their behaviors in terms of processed data or their outputs to other mocked units. We can apply this kind of test in practically all the app structures, given the app is very decoupled and our methods do just a few things in their given scope.
-
-![project structure image](pictures/tests.png)
+The purpose is to call some methods in the interactors and test their behaviors in terms of processed data or their outputs to other mocked units. We can apply this kind of test in practically all the app structures, given the app is very decoupled and our methods do just a few things in their given scope.
 
 ## How the app works
 
