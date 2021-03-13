@@ -1,6 +1,4 @@
-package com.example.barfinder.ui.mainscreen.interfaces
-
-import com.example.barfinder.model.Place
+package com.example.barfinder.ui.placelist.interfaces
 
 interface PlaceFilterView {
     fun searchBarSentWith(text: String)

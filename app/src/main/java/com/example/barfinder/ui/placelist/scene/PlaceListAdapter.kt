@@ -1,4 +1,4 @@
-package com.example.barfinder.ui.mainscreen.scene
+package com.example.barfinder.ui.placelist.scene
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -1,8 +1,8 @@
-package com.example.barfinder.ui.mainscreen.scene
+package com.example.barfinder.ui.placelist.scene
 
 import com.example.barfinder.model.Place
-import com.example.barfinder.ui.mainscreen.interfaces.PlaceFilterInteraction
-import com.example.barfinder.ui.mainscreen.interfaces.PlaceListInteraction
+import com.example.barfinder.ui.placelist.interfaces.PlaceFilterInteraction
+import com.example.barfinder.ui.placelist.interfaces.PlaceListInteraction
 
 class PlaceListInteractor() : PlaceListInteraction, PlaceFilterInteraction {
 

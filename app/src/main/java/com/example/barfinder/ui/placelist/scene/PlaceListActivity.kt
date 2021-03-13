@@ -1,11 +1,11 @@
-package com.example.barfinder.ui.mainscreen.scene
+package com.example.barfinder.ui.placelist.scene
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.barfinder.R
 import com.example.barfinder.model.Place
-import com.example.barfinder.ui.mainscreen.interfaces.PlaceFilterView
-import com.example.barfinder.ui.mainscreen.interfaces.PlaceListView
+import com.example.barfinder.ui.placelist.interfaces.PlaceFilterView
+import com.example.barfinder.ui.placelist.interfaces.PlaceListView
 
 class PlaceListActivity : PlaceListView, PlaceFilterView, AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

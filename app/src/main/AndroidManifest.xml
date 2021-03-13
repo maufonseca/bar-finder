@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.barfinder">
+    <!-- coarse loaction is within a city block. this will be sufficient  for finding nearby places -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BarFinder">
-        <activity android:name=".ui.mainscreen.scene.PlaceListActivity">
+        <activity android:name=".ui.locationpermission.scene.LocationPermissionActivity"></activity>
+        <!-- Recommended for Android 9 (API level 28) and lower. -->
+        <!-- Required for Android 10 (API level 29) and higher. -->
+        <service
+            android:name=".MyNavigationService"
+            android:foregroundServiceType="location">
+
+            <!-- Any inner elements would go here. -->
+        </service>
+
+        <activity android:name=".ui.placelist.scene.PlaceListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

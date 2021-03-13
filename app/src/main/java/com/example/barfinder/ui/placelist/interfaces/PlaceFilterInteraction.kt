@@ -1,4 +1,4 @@
-package com.example.barfinder.ui.mainscreen.interfaces
+package com.example.barfinder.ui.placelist.interfaces
 
 interface PlaceFilterInteraction {
     fun filterOnlyBars()
