@@ -87,6 +87,8 @@ Decoupling the app logic from the Activities is useful not only because it makes
 
 *Example from PlaceListInteractor.kt*
 ```java
+class PlaceListInteractor() : PlaceListInteraction, PlaceFilterInteraction {
+
     override fun filterOnlyCafes() {
         //filter list by cafes
     }
@@ -98,6 +100,7 @@ Decoupling the app logic from the Activities is useful not only because it makes
     override fun filterPlacesByName(name: String) {
         //filter by name based on a string
     }
+}
 ```
 
 ### Unit-Testing the logic
